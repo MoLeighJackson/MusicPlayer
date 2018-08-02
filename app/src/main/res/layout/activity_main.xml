@@ -35,8 +35,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/music_note"
-        android:text="Track One"
-        android:onClick="openNowPlayingScreen"
-        />
+        android:text="Track One" />
+        <!-- android:onClick="openNowPlayingScreen" -->
+
 
 </RelativeLayout>
