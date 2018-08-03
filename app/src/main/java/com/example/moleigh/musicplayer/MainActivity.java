@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -14,17 +16,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        
-
 
 // code for now playing screen
-        TextView playTrack = (TextView) findViewById(R.id.track_name);
+
+        final TextView playTrack = (TextView) findViewById(R.id.track_name);
         playTrack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent playSongIntent = new Intent(MainActivity.this, NowPlayingActivity.class);
                 startActivity(playSongIntent);
             }
+
         });
 
 
@@ -59,4 +61,5 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
 }

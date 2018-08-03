@@ -2,7 +2,9 @@ package com.example.moleigh.musicplayer;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -20,13 +22,8 @@ public class RecentlyPlayedActivity extends AppCompatActivity {
         tracks.add("The Black Cat by Aaron Kenny");
         tracks.add("Canal 3 by Quincas Moreira");
 
-        LinearLayout rootView = (LinearLayout) findViewById(R.id.rootView);
-
-        for (int index = 0; index < tracks.size(); index++) {
-
-            TextView trackView = new TextView(this);
-            trackView.setText(tracks.get(index));
-            rootView.addView(trackView);
-        }
+        ArrayAdapter<String> itemsAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, tracks);
+        ListView listView = (ListView) findViewById(R.id.list);
+        listView.setAdapter(itemsAdapter);
     }
 }
