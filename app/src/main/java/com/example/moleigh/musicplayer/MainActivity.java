@@ -14,6 +14,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        
+
+
 // code for now playing screen
         TextView playTrack = (TextView) findViewById(R.id.track_name);
         playTrack.setOnClickListener(new View.OnClickListener() {
@@ -24,7 +27,27 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-// code for recently played screen
+
+        TextView playTrack2 = (TextView) findViewById(R.id.track_name2);
+        playTrack2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent playSongIntent = new Intent(MainActivity.this, NowPlayingActivity.class);
+                startActivity(playSongIntent);
+            }
+        });
+
+        TextView playTrack3 = (TextView) findViewById(R.id.track_name3);
+        playTrack3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent playSongIntent = new Intent(MainActivity.this, NowPlayingActivity.class);
+                startActivity(playSongIntent);
+            }
+        });
+
+
+        // code for recently played screen
         TextView playedRecently = (TextView) findViewById(R.id.recently_played);
         playedRecently.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(showRecentlyPlayedScreen);
             }
         });
-}
 
+
+    }
 }

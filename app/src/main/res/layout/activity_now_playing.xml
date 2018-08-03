@@ -25,7 +25,6 @@
         android:id="@+id/current_track"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Now Playing - Track Title by Artist"
         android:layout_below="@id/album_art"/>
 
     <LinearLayout
