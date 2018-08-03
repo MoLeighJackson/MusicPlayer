@@ -17,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
+        
+
 // code for now playing screen
 
         final TextView playTrack = (TextView) findViewById(R.id.track_name);

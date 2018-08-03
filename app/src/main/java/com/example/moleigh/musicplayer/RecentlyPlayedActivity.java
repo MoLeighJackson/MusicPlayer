@@ -2,6 +2,7 @@ package com.example.moleigh.musicplayer;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Adapter;
 import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -17,13 +18,14 @@ public class RecentlyPlayedActivity extends AppCompatActivity {
         setContentView(R.layout.activity_recently_played);
 
         //create an array of songs
-        ArrayList<String> tracks = new ArrayList<String>();
-        tracks.add("This is a Jazz Space by Midnight North");
-        tracks.add("The Black Cat by Aaron Kenny");
-        tracks.add("Canal 3 by Quincas Moreira");
+        ArrayList<SongDetails> tracks = new ArrayList<SongDetails>();
 
-        ArrayAdapter<String> itemsAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, tracks);
+        tracks.add(new SongDetails("Artist: Midnight North", "Song: This is a Jazz Space"));
+        tracks.add(new SongDetails("Artist: Aaron Kenny", "Song: The Black Cat"));
+        tracks.add(new SongDetails("Artist: Quincas Moreira", "Song: Canal 3"));
+
+        SongDetailsAdapter adapter = new SongDetailsAdapter(this, tracks);
         ListView listView = (ListView) findViewById(R.id.list);
-        listView.setAdapter(itemsAdapter);
+        listView.setAdapter(adapter);
     }
 }
