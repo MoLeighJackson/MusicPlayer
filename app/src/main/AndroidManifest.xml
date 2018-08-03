@@ -19,7 +19,8 @@
         <activity
             android:name=".NowPlayingActivity"
             android:label="Now Playing"></activity>
-        <activity android:name=".RecentlyPlayedActivity"></activity>
+        <activity android:name=".RecentlyPlayedActivity"
+            android:label="@string/recently_played"></activity>
     </application>
 
 </manifest>
