@@ -7,6 +7,13 @@
     android:layout_height="match_parent"
     tools:context=".NowPlayingActivity">
 
+    <Button
+        android:id="@+id/recently_played_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Recently Played" />
+
     <ImageView
         android:id="@+id/album_art"
         android:src="@drawable/albumart"
@@ -51,7 +58,7 @@
             android:layout_height="25dp"
         />
 
-
     </LinearLayout>
+
 
 </RelativeLayout>

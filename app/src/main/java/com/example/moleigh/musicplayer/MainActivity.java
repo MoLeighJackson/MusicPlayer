@@ -14,12 +14,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-        TextView numbers = (TextView) findViewById(R.id.track_name);
-
-// Set a click listener on the track name view
-        numbers.setOnClickListener(new View.OnClickListener() {
-            // The code in this method will be executed when the track name View is clicked on.
+// code for now playing screen
+        TextView playTrack = (TextView) findViewById(R.id.track_name);
+        playTrack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent playSongIntent = new Intent(MainActivity.this, NowPlayingActivity.class);
@@ -27,6 +24,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-    }
+// code for recently played screen
+        TextView playedRecently = (TextView) findViewById(R.id.recently_played);
+        playedRecently.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent showRecentlyPlayedScreen = new Intent(MainActivity.this, RecentlyPlayedActivity.class);
+                startActivity(showRecentlyPlayedScreen);
+            }
+        });
+}
 
 }

@@ -31,12 +31,25 @@
         />
 
     <TextView
-        android:id="@+id/track_name"
+        android:id="@+id/recently_played"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/music_note"
+        android:text="Recently Played" />
+
+    <TextView
+        android:id="@+id/listen_now"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recently_played"
+        android:text="Listen Now" />
+
+    <TextView
+        android:id="@+id/track_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/listen_now"
         android:text="Track One" />
-        <!-- android:onClick="openNowPlayingScreen" -->
 
 
 </RelativeLayout>
