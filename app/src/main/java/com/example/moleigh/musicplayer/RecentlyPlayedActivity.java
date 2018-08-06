@@ -30,11 +30,11 @@ public class RecentlyPlayedActivity extends AppCompatActivity {
 
 
         //create an array of songs
-        ArrayList<SongDetails> tracks = new ArrayList<SongDetails>();
+        final ArrayList<SongDetails> tracks = new ArrayList<SongDetails>();
 
-        tracks.add(new SongDetails("Artist: Midnight North", "Song: This is a Jazz Space"));
-        tracks.add(new SongDetails("Artist: Aaron Kenny", "Song: The Black Cat"));
-        tracks.add(new SongDetails("Artist: Quincas Moreira", "Song: Canal 3"));
+        tracks.add(new SongDetails("Artist: Midnight North", "Song: This is a Jazz Space", R.raw.this_is_a_jazz_space));
+        tracks.add(new SongDetails("Artist: Aaron Kenny", "Song: The Black Cat", R.raw.the_black_cat));
+        tracks.add(new SongDetails("Artist: Quincas Moreira", "Song: Canal 3", R.raw.canal_3));
 
         SongDetailsAdapter adapter = new SongDetailsAdapter(this, tracks);
         ListView listView = (ListView) findViewById(R.id.list);
@@ -44,7 +44,8 @@ public class RecentlyPlayedActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
           @Override
           public void onItemClick(AdapterView<?> parent, View view, int position, long id){
-              mMediaPlayer = MediaPlayer.create(RecentlyPlayedActivity.this, R.raw.this_is_a_jazz_space);
+              SongDetails songDetails = tracks.get(position);
+              mMediaPlayer = MediaPlayer.create(RecentlyPlayedActivity.this, songDetails.getmAudioResourceId());
               mMediaPlayer.start();
           }
         });

@@ -6,9 +6,12 @@ public class SongDetails {
 
     private String mNameOfTrack;
 
-    public SongDetails(String nameOfArtist, String nameOfTrack) {
+    private int mAudioResourceId;
+
+    public SongDetails(String nameOfArtist, String nameOfTrack, int audioResourceID) {
         mNameOfArtist = nameOfArtist;
         mNameOfTrack = nameOfTrack;
+        mAudioResourceId = audioResourceID;
     }
 
     /*
@@ -23,6 +26,13 @@ public class SongDetails {
      */
     public String getmNameOfTrack() {
         return mNameOfTrack;
+    }
+
+    /*
+    get audio file for selected track
+    */
+    public int getmAudioResourceId() {
+        return mAudioResourceId;
     }
 }
 
