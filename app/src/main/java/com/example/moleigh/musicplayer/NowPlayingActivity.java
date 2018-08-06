@@ -47,7 +47,7 @@ public class NowPlayingActivity extends AppCompatActivity {
 
         Button pauseButton = (Button) findViewById(R.id.pause_btn);
 
-        playButton.setOnClickListener(new View.OnClickListener() {
+        pauseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public  void onClick(View v){
                 mediaPlayer.pause();
