@@ -25,3 +25,4 @@ public class SongDetails {
         return mNameOfTrack;
     }
 }
+

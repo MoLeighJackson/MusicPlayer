@@ -12,8 +12,6 @@ import org.w3c.dom.Text;
 public class NowPlayingActivity extends AppCompatActivity {
 
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,7 +29,7 @@ public class NowPlayingActivity extends AppCompatActivity {
 
     }
 
-    }
+}
 
 
 

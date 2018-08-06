@@ -1,72 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/title_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Bops"
-       />
 
-    <TextView
-    android:id="@+id/subtitle_text"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-        android:layout_below="@id/title_text"
-    android:text="Music Player"
-    />
-
-    <ImageView
-        android:id="@+id/music_note"
-        android:src="@drawable/musicnote"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/subtitle_text"
-        />
-
-    <TextView
+    <Button
         android:id="@+id/recently_played"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/music_note"
-        android:text="Recently Played" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Recently Played"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
 
     <TextView
         android:id="@+id/listen_now"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/recently_played"
-        android:text="Listen Now" />
+        android:layout_marginTop="15dp"
+        android:paddingLeft="10dp"
+        android:text="Listen Now (select a song below):"
+        android:textColor="@color/colorAccent"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
 
     <TextView
         android:id="@+id/track_name"
         android:layout_width="wrap_content"
-        android:padding="25dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/listen_now"
-        android:text="This is a Jazz Space by Midnight North" />
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dp"
+        android:text="This is a Jazz Space by Midnight North"
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/track_name2"
-        android:padding="25dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/track_name"
-        android:text="This Black Cat by Aaron Kenny" />
+        android:layout_marginTop="20dp"
+        android:paddingLeft="10dp"
+        android:text="This Black Cat by Aaron Kenny"
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/track_name3"
-        android:padding="25dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/track_name2"
-        android:text="Canal 3 by Quincas Moreira" />
+        android:layout_marginTop="20dp"
+        android:paddingLeft="10dp"
+        android:text="Canal 3 by Quincas Moreira"
+        android:textSize="16sp" />
 
 
 </RelativeLayout>
