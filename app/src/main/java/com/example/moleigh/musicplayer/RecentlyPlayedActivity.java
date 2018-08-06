@@ -2,6 +2,7 @@ package com.example.moleigh.musicplayer;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -19,6 +20,8 @@ import org.w3c.dom.Text;
 import java.util.ArrayList;
 
 public class RecentlyPlayedActivity extends AppCompatActivity {
+
+    private MediaPlayer mMediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +44,8 @@ public class RecentlyPlayedActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
           @Override
           public void onItemClick(AdapterView<?> parent, View view, int position, long id){
-              Toast.makeText(RecentlyPlayedActivity.this, "List item click", Toast.LENGTH_SHORT).show();
+              mMediaPlayer = MediaPlayer.create(RecentlyPlayedActivity.this, R.raw.this_is_a_jazz_space);
+              mMediaPlayer.start();
           }
         });
 
