@@ -41,6 +41,12 @@ public class NowPlayingActivity extends AppCompatActivity {
             @Override
             public  void onClick(View v){
                 mediaPlayer.start();
+                mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    @Override
+                    public void onCompletion(MediaPlayer mediaPlayer) {
+                        Toast.makeText(NowPlayingActivity.this, "I'm done!", Toast.LENGTH_SHORT).show();
+                    }
+                });
             }
         });
 
