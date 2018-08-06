@@ -14,8 +14,7 @@ import org.w3c.dom.Text;
 
 public class NowPlayingActivity extends AppCompatActivity {
 
-    private MediaPlayer mediaPlayer;
-
+    public MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +43,7 @@ public class NowPlayingActivity extends AppCompatActivity {
                 mediaPlayer.start();
             }
         });
+
 
         Button pauseButton = (Button) findViewById(R.id.pause_btn);
 
